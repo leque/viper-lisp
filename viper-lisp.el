@@ -23,9 +23,7 @@
 ;;; Commentary:
 
 ;;; Code:
-(eval-when-compile
-  (require 'cl))
-
+(require 'cl-lib)
 (require 'viper-cmd)
 
 (defvar viper-lisp-brac-functions '())
@@ -154,7 +152,7 @@
               nil
               t))
   (mapc #'(lambda (lis)
-            (destructuring-bind (key f g) lis
+            (cl-destructuring-bind (key f g) lis
               (define-key viper-vi-local-user-map key
                 (if viper-lisp-mode f g))))
         `(("(" ,#'viper-lisp-backward-sexp ,#'viper-backward-sentence)
