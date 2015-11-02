@@ -3,11 +3,11 @@
 Minor-mode for editing LISP in `viper-mode`
 as in [the traditional vi](http://ex-vi.sourceforge.net/viin/paper-6.html#section41).
 
-# How to use
+## Installation
 
-    (require 'viper-lisp)
+do `M-x package-install-file` `viper-lisp.el`
 
-and then
+## How to use
 
     M-x enable-viper-lisp-mode
 
