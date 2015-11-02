@@ -143,6 +143,7 @@
   (interactive "P")
   (viper-lisp-bracket arg viper-lisp-ket-functions #'viper-ket-function))
 
+;;;###autoload
 (define-minor-mode viper-lisp-mode
   nil
   :init-value nil
@@ -162,11 +163,15 @@
           ("[" ,#'viper-lisp-brac ,#'viper-brac-function)
           ("]" ,#'viper-lisp-ket ,#'viper-ket-function))))
 
+;;;###autoload
 (defun enable-viper-lisp-mode ()
+  "Turn on `viper-lisp-mode'"
   (interactive)
   (viper-lisp-mode +1))
 
+;;;###autoload
 (defun disable-viper-lisp-mode ()
+  "Turn off `viper-lisp-mode'"
   (interactive)
   (viper-lisp-mode -1))
 
